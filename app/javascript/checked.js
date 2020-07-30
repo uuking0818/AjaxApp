@@ -2,9 +2,8 @@ function check() {
   const posts = document.getElementsByClassName("post");
   postsA = Array.from(posts);
 
-
   postsA.forEach(function (post) {
-    if (post.getAttribute("data-load") != null) {
+     if (post.getAttribute("data-load") != null) {
       return null;
     }
     post.setAttribute("data-load", "true");
@@ -22,7 +21,7 @@ function check() {
           post.removeAttribute("data-check");
         }
         if (XHR.status != 200) {
-          alert('Error ${XHR.status}: ${XHR.statusText}');
+          alert(`Error ${XHR.status}: ${XHR.statusText}`);
         } else {
           return null;
         }
